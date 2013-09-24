@@ -57,12 +57,12 @@
 		*******************************/
 		
 		public function AddPrivateFocusAction () {
-			$js = sprintf('__phoneBoxSetDefault(%s, %s)', $this->ControlId, $this->defaultAreaCode);
+			$js = sprintf('__phoneBoxSetDefault(\'%s\', \'%s\')', $this->ControlId, $this->defaultAreaCode);
 			$this->AddAction(new QFocusEvent(), new QJavaScriptAction($js));
 		}
 		
 		public function AddPrivateBlurAction () {
-			$js = sprintf('__phoneBoxCheckChanged(%s, %s)', $this->ControlId, $this->defaultAreaCode);
+			$js = sprintf('__phoneBoxCheckChanged(\'%s\', \'%s\')', $this->ControlId, $this->defaultAreaCode);
 			$this->AddAction(new QBlurEvent(), new QJavaScriptAction($js));
 		}
 		
